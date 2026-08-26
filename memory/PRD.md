@@ -30,6 +30,7 @@ Build a modern, dark-first expense tracker for iOS and Android with fast expense
 - Verified rendering, validation, persistence, filtering, summaries, charts, edit, and delete in mobile preview.
 - Added native date picker integration for expense dates and from/to range filters, CSV generation, and native share-sheet export.
 - Verified new controls, export invocation, and responsive layout in preview; actual picker selection/share sheet require an iOS or Android runtime.
+- Added currency switcher chip in the dashboard header (USD, INR, EUR, GBP, JPY) with persisted preference and dynamic symbol formatting across summary cards, charts, transaction rows, form input, and CSV export header. Verified live switching updates all amounts.
 
 ## Prioritized backlog
 - P0: None for the requested local-first MVP.
