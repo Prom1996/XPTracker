@@ -28,10 +28,12 @@ Build a modern, dark-first expense tracker for iOS and Android with fast expense
 - Added transaction history, category filter chips, edit/delete confirmation flow, empty states, summary metrics, category ring, and seven-day bar trend.
 - Added stable control test IDs and preserved the icon-font splash prewarming logic.
 - Verified rendering, validation, persistence, filtering, summaries, charts, edit, and delete in mobile preview.
+- Added native date picker integration for expense dates and from/to range filters, CSV generation, and native share-sheet export.
+- Verified new controls, export invocation, and responsive layout in preview; actual picker selection/share sheet require an iOS or Android runtime.
 
 ## Prioritized backlog
 - P0: None for the requested local-first MVP.
-- P1: Add date-range filter alongside category filters; add export/share CSV.
+- P1: Validate native picker selection and share sheet on physical iOS/Android devices; add date-range filter alongside category filters and export/share CSV are implemented.
 - P2: Add recurring expenses, budgets, monthly comparison analytics, and optional cloud sync.
 
 ## Next tasks
