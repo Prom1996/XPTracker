@@ -1,0 +1,137 @@
+{
+  "app_name": "Apex Ledger",
+  "personality": "1 iOS-Native Clean (adapted for Dark-First Mobile Finance)",
+  "personality_one_liner": "A precision-engineered mobile expense tracker with obsidian obsidian surfaces, crisp typography, and high-contrast financial telemetry.",
+  "color": {
+    "surface": "#121214",
+    "onSurface": "#F4F4F6",
+    "surfaceSecondary": "#1C1C1E",
+    "onSurfaceSecondary": "#E5E5EA",
+    "surfaceTertiary": "#2C2C2E",
+    "onSurfaceTertiary": "#A1A1A6",
+    "surfaceInverse": "#F4F4F6",
+    "onSurfaceInverse": "#121214",
+    "brand": "#34C759",
+    "brandPrimary": "#34C759",
+    "onBrandPrimary": "#121214",
+    "brandSecondary": "#30D158",
+    "onBrandSecondary": "#121214",
+    "brandTertiary": "#1B3B22",
+    "onBrandTertiary": "#34C759",
+    "success": "#34C759",
+    "onSuccess": "#121214",
+    "warning": "#FF9F0A",
+    "onWarning": "#121214",
+    "error": "#FF453A",
+    "onError": "#121214",
+    "info": "#0A84FF",
+    "onInfo": "#F4F4F6",
+    "border": "#2C2C2E",
+    "borderStrong": "#3A3A3C",
+    "divider": "#222225"
+  },
+  "typography": {
+    "displayFontFamily": "SpaceGrotesk",
+    "textFontFamily": "Inter",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous touch spacing, 16px horizontal margins, 12px card padding, sticky bottom actions with safe area inset.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 8,
+    "md": 14,
+    "lg": 22,
+    "pill": 999
+  },
+  "shadow_tier": "1",
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": "true",
+    "do's": [
+      "Use frosted glass headers over scrolling transaction lists",
+      "Apply translucent surface overlays on featured summary cards",
+      "Keep glass tint opacity at least 80% for pristine text legibility"
+    ],
+    "dont's": [
+      "Never apply blur to form inputs or dense table rows",
+      "Never use pure transparent backgrounds for sticky navigation"
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Dashboard",
+      "purpose": "Provides real-time financial telemetry including Total Spent, Current Month Expenses, Highest Spending Category, and quick analytics charts.",
+      "states": {
+        "loading": "Centered sleek emerald spinner on obsidian canvas",
+        "empty": "Subtle empty state illustration with 'No expenses logged yet' and 'Add First Expense' CTA button",
+        "error": "Banner with error description and retry button"
+      },
+      "layout": "Vertical scroll container with sticky header. Top section houses summary cards (Total Spent, Current Month, Top Category). Middle section displays Interactive Charts (Doughnut & Bar trend graphs). Bottom section renders recent transaction previews with category icons."
+    },
+    {
+      "name": "Transactions",
+      "purpose": "Comprehensive transaction history with robust date range filtering, category search, edit, and delete flows.",
+      "states": {
+        "loading": "Skeleton loader rows matching transaction card dimensions",
+        "empty": "No transactions match current filter. Quick 'Clear Filters' action button.",
+        "error": "Failed to load history message with retry action"
+      },
+      "layout": "Sticky category chip filter bar at top, search input, followed by a grouped list of expense items with swipe actions or inline edit/delete triggers."
+    },
+    {
+      "name": "AddExpense",
+      "purpose": "Fast, validated expense entry form with Amount, Category picker, Date selector, and Notes description.",
+      "states": {
+        "loading": "Submitting state with spinner on primary CTA button",
+        "empty": "Form fields blank with placeholder hints",
+        "error": "Inline validation errors for missing or negative amounts"
+      },
+      "layout": "Single-column scrollable form inside KeyboardAvoidingView. Numeric keypad for amount input, pill selectors for categories (Food, Transportation, Utilities, Entertainment, Housing, Miscellaneous), date picker, and sticky bottom 'Save Expense' action."
+    },
+    {
+      "name": "Analytics",
+      "purpose": "Detailed financial breakdown with percentage shares by category and monthly comparison bar charts.",
+      "states": {
+        "loading": "Chart skeleton loaders",
+        "empty": "Insufficient data for analytics graphs. Add at least 3 expenses.",
+        "error": "Chart render error message with reload option"
+      },
+      "layout": "Scrollable metrics overview with category spending breakdown bars and interactive doughnut chart segments."
+    }
+  ],
+  "images": {
+    "hero_backdrop": {
+      "url": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbW9kZSUyMGZpbmFuY2UlMjBhYnN0cmFjdCUyMGdyYXBoaWMlMjBiYWNrZ3JvdW5kJTIwdGV4dHVyZXxlbnwwfHx8fDE3ODc3MTc1NTN8MA&ixlib=rb-4.1.0&q=85",
+      "dark": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbW9kZSUyMGZpbmFuY2UlMjBhYnN0cmFjdCUyMGdyYXBoaWMlMjBiYWNrZ3JvdW5kJTIwdGV4dHVyZXxlbnwwfHx8fDE3ODc3MTc1NTN8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Dark abstract financial graphic texture background"
+    }
+  },
+  "instructions_to_main_agent": "Ensure absolute adherence to dark-mode-first aesthetic (obsidian #121214 base, emerald #34C759 primary accents). Strictly avoid blue/purple/indigo banned hues. Implement all requested fields: Amount, Category (Food, Transportation, Utilities, Entertainment, Housing, Miscellaneous), Date, Notes. Support local storage persistence, real-time summary cards, doughnut/pie chart, bar/line trend chart, add, edit, delete, and filter flows. All interactive elements must have minimum 44x44pt touch targets and active haptic feedback."
+}
